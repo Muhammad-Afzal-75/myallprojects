@@ -1,0 +1,10 @@
+.bg{
+    background-color: rgb(152, 184, 175);
+    padding: 20px;
+    display: flex;
+
+    align-items: center;
+}
+.lab{
+    margin-left: 200px;
+}

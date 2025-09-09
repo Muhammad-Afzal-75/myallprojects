@@ -1,0 +1,124 @@
+import React, { useEffect, useState } from "react";
+
+function Blog() {
+  const [blogData, setBlogData] = useState([]);
+
+  useEffect(() => {
+    // Fetch data from the JSON file
+    fetch("../../public/data/Blog.json") // Adjust path if needed
+      .then((response) => response.json())
+      .then((data) => setBlogData(data));
+  }, []);
+
+  return (
+    <div className="container mx-auto px-4 py-8">
+      {/* Header */}
+      <div className="flex items-center mb-8">
+        <h2 className="text-2xl text-gray-600">Blog</h2>
+        <div className="ml-4 h-0.5 mt-3 w-[80px] bg-orange-600"></div>
+      </div>
+      <h2 className="text-4xl font-semibold mb-8">Our Latest Articles</h2>
+      {/* Blog Cards */}
+      <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-8">
+        {blogData.map((post) => (
+          <div key={post.id} className="bg-white rounded-lg shadow-lg overflow-hidden">
+            {/* Blog Image */}
+            <img
+              src={post.image}
+              alt={post.title}
+              className="w-full h-56 object-cover"
+            />
+            {/* Blog Content */}
+            <div className="p-4">
+              <h3 className="text-xl font-semibold text-gray-800 mb-2">
+                {post.title}
+              </h3>
+              <div className="flex items-center mt-4">
+                <img
+                  src={post.avatar}
+                  alt={post.author}
+                  className="w-10 h-10 rounded-full mr-3"
+                />
+                <div>
+                  <h4 className="text-gray-700 font-medium">{post.author}</h4>
+                  <p className="text-gray-500 text-sm">{post.date}</p>
+                </div>
+              </div>
+            </div>
+          </div>
+        ))}
+      </div>
+    </div>
+  );
+}
+
+export default Blog;
+            
+
+
+
+
+
+
+
+
+[
+    {
+      "id": 1,
+      "title": "Exploring the Hidden Gems of Nature",
+      "image": "../../public/images/img/blog/blog-1.jpg",
+      "author": "John Doe",
+      "avatar": "../../public/images/img/blog/blog-author.jpg",
+      "date": "January 20, 2025"
+    },
+    {
+      "id": 2,
+      "title": "10 Tips for Better Work-Life Balance",
+      "image": "../../public/images/img/blog/blog-2.jpg",
+      "author": "Emily Smith",
+      "avatar": "../../public/images/img/blog/blog-author-2.jpg",
+      "date": "January 15, 2025"
+    },
+    {
+      "id": 3,
+      "title": "The Ultimate Guide to Healthy Eating",
+      "image": "../../public/images/img/blog/blog-3.jpg",
+      "author": "Michael Brown",
+      "avatar": "../../public/images/img/blog/blog-author-3.jpg",
+      "date": "January 10, 2025"
+    },
+    {
+      "id": 4,
+      "title": "Adventures in Urban Exploration",
+      "image": "../../public/images/img/blog/blog-4.jpg",
+      "author": "Sophia Wilson",
+      "avatar": "../../public/images/img/blog/blog-author-4.jpg",
+      "date": "January 5, 2025"
+    },
+    {
+      "id": 5,
+      "title": "How to Stay Fit with a Busy Schedule",
+      "image": "../../public/images/img/blog/blog-5.jpg",
+      "author": "David Johnson",
+      "avatar": "../../public/images/img/blog/blog-author-5.jpg",
+      "date": "January 3, 2025"
+    },
+    {
+      "id": 6,
+      "title": "The Rise of Remote Work Culture",
+      "image": "../../public/images/img/blog/blog-6.jpg",
+      "author": "Olivia Martinez",
+      "avatar": "../../public/images/img/blog/blog-author-6.jpg",
+      "date": "January 1, 2025"
+    }
+  ]
+  
+
+
+
+
+
+
+
+
+

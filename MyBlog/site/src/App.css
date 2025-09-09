@@ -1,0 +1,137 @@
+@import url('https://fonts.googleapis.com/css2?family=Fira+Sans:wght@700&family=Raleway:wght@200;300;400;700;900&display=swap');
+
+
+
+.dropdown-content {
+  display: none;
+  position: absolute;
+  background-color: #fff;
+  box-shadow: 0 8px 16px rgba(0, 0, 0, 0.1);
+  padding: 15px 10px;
+  margin-top: 10px;
+  z-index: 1;
+}
+
+.shoe {
+  position: relative;
+  cursor: pointer;
+  transition: transform 0.3s;
+}
+
+.shoe:hover .dropdown-content {
+  display: block;
+  color: black;
+  font-weight: bold;
+}
+
+ul {
+  list-style: none;
+}
+
+.shoe-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+
+}
+
+hr {
+  margin: 10px 0px !important;
+}
+
+.icon {
+  display: flex;
+  align-items: center;
+}
+
+.icon ion-icon {
+  margin-top: 5px;
+}
+
+.hero {
+  text-align: center;
+  margin: 20px 0px;
+}
+
+.hero h1 {
+  font-size: 60px;
+  margin: 10px;
+  font-weight: bold;
+  font-family: 'Fira Sans', Arial, sans-serif;
+}
+
+.hero p {
+  font-size: 25px;
+  color: #656565;
+}
+
+.Health {
+  background-color: #696d74;
+  color: white;
+  display: inline-block;
+  font-size: 12px;
+  font-weight: 500;
+  padding: 6px 10px;
+  margin: 0 0 10px;
+  border-radius: 100px;
+  box-sizing: border-box;
+  text-transform: capitalize;
+  height: auto;
+}
+.Healthh {
+  background-color: #adb3bf99;
+  color: white;
+  display: inline-block;
+  font-size: 12px;
+  font-weight: 500;
+  padding: 6px 10px;
+  margin: 0 0 10px;
+  border-radius: 100px;
+  box-sizing: border-box;
+  text-transform: capitalize;
+  height: auto;
+}
+.post-thumb {
+  display: block;
+  
+  width: 100%;
+  height: 42vh;
+  object-fit: cover;
+  object-position: top;
+  
+  
+  transition: transform 1s ease;
+}
+
+a{
+  text-decoration: none;
+}
+.post-title a{
+  color: #fff;
+}
+.card-body{
+  padding: 50px !important;
+}
+p{
+  color: #fff;
+}.authr{
+  color: #afafaf;
+  font-size: 10px;
+}
+.card:hover img{
+  transform: scale(1.1);
+}
+.text-body{
+  position: absolute;
+  top: 108px;
+  padding: 10px 15px;
+  border-radius: 5px;
+}
+.post-title a{
+  font-size: 22px;
+}
+.box{
+  background-color: #eee;
+  text-align: center;
+  border-radius: 10px;
+}

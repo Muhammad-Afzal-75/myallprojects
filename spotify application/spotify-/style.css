@@ -1,0 +1,112 @@
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@100..900&family=Ubuntu&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@100..900&family=Ubuntu&family=Varela+Round&display=swap');
+body{
+    background-color: antiquewhite;
+}
+*{
+    margin: 0;
+    padding: 0;
+}
+nav{
+    font-family: "Ubuntu", sans-serif;
+
+}
+nav ul{
+    list-style-type: none;
+    display: flex;
+    background-color: black;
+    color: white;
+    align-items: center;
+    height: 65px;
+    
+
+}
+nav ul li{
+    padding: 0 12px;
+}
+.logo img{
+    width: 44px;
+    
+}
+.logo{
+    display: flex;
+    align-items: center;
+    font-weight: bolder;
+    font-size: 1.3rem;
+    
+}
+.container{
+    min-height: 70vh;
+    background-color: black;
+    color: #fff;
+    display: flex;
+    margin: 10px auto;
+    width: 70%;
+    border-radius: 12px;
+    padding: 10px;
+    background-image: url('./coverr.jpg');
+    object-fit: cover;
+
+}
+.bottom{
+position: sticky;
+background-color: black;
+height: 100px;
+bottom: 0;
+display: flex;
+justify-content: center;
+align-items: center;
+color: #fff;
+flex-direction: column;
+}
+#myprogressbar{
+    width: 80vw;
+    cursor: pointer;
+}
+.icons{
+    margin-top: 14px;
+    font-size: 20px;
+}
+.icons i{
+    cursor: pointer;
+}
+.songitemcontainer{
+    margin-top: 20px;
+}
+.songItem{
+    height: 40px;
+    display: flex;
+    background-color: #fff;
+    color: black;
+    margin: 12px 0;
+    justify-content: space-between;
+    align-items: center;
+    border-radius: 30px;
+    
+    
+}
+.songItem img{
+    width: 30px;
+    height: 30px;
+    margin: 0 23px;
+    border-radius: 50%;
+}
+.timeStamp{
+    padding: 0 15px;
+}
+.timeStamp i{
+    cursor: pointer;
+}
+.singInfo{
+    position: absolute;
+    left: 10vw;
+    display: flex;
+    align-items: center;
+    gap:10px;
+}
+.singInfo img{
+    opacity: 0;
+    transition:opacity 0.4s ease-in;
+    
+}

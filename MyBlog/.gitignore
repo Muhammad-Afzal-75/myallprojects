@@ -1,0 +1,4 @@
+/api/node_modules
+/site/node_modules
+/api/package-lock.json
+/site/package-lock.json

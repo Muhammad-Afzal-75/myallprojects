@@ -1,0 +1,51 @@
+[
+    {
+      "id": 1,
+      "title": "Exploring the Hidden Gems of Nature",
+      "image": "../../public/images/img/blog/blog-1.jpg",
+      "author": "John Doe",
+      "avatar": "../../public/images/img/blog/blog-author.jpg",
+      "date": "January 20, 2025"
+    },
+    {
+      "id": 2,
+      "title": "10 Tips for Better Work-Life Balance",
+      "image": "../../public/images/img/blog/blog-2.jpg",
+      "author": "Emily Smith",
+      "avatar": "../../public/images/img/blog/blog-author-2.jpg",
+      "date": "January 15, 2025"
+    },
+    {
+      "id": 3,
+      "title": "The Ultimate Guide to Healthy Eating",
+      "image": "../../public/images/img/blog/blog-3.jpg",
+      "author": "Michael Brown",
+      "avatar": "../../public/images/img/blog/blog-author-3.jpg",
+      "date": "January 10, 2025"
+    },
+    {
+      "id": 4,
+      "title": "Adventures in Urban Exploration",
+      "image": "../../public/images/img/blog/blog-4.jpg",
+      "author": "Sophia Wilson",
+      "avatar": "../../public/images/img/blog/blog-author-4.jpg",
+      "date": "January 5, 2025"
+    },
+    {
+      "id": 5,
+      "title": "How to Stay Fit with a Busy Schedule",
+      "image": "../../public/images/img/blog/blog-5.jpg",
+      "author": "David Johnson",
+      "avatar": "../../public/images/img/blog/blog-author-5.jpg",
+      "date": "January 3, 2025"
+    },
+    {
+      "id": 6,
+      "title": "The Rise of Remote Work Culture",
+      "image": "../../public/images/img/blog/blog-6.jpg",
+      "author": "Olivia Martinez",
+      "avatar": "../../public/images/img/blog/blog-author-6.jpg",
+      "date": "January 1, 2025"
+    }
+  ]
+  

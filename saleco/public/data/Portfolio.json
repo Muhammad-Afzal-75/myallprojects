@@ -1,0 +1,68 @@
+{
+    "portfolioItems": [
+      {
+        "id": 1,
+        "category": "App",
+        "title": "App Project 1",
+        "image": "../../public/images/img/masonry-portfolio/masonry-portfolio-1.jpg",
+        "description": "A brief description of App Project 1"
+      },
+      {
+        "id": 2,
+        "category": "Web",
+        "title": "Web Project 1",
+        "image": "../../public/images/img/masonry-portfolio/masonry-portfolio-4.jpg",
+        "description": "A brief description of Web Project 1"
+      },
+      {
+        "id": 3,
+        "category": "Web",
+        "title": "Web Project 2",
+        "image": "../../public/images/img/masonry-portfolio/masonry-portfolio-7.jpg",
+        "description": "A brief description of Web Project 1"
+      },
+      {
+        "id": 4,
+        "category": "Web",
+        "title": "Web Project 3",
+        "image": "../../public/images/img/masonry-portfolio/masonry-portfolio-2.jpg",
+        "description": "A brief description of Web Project 1"
+      },
+      {
+        "id": 5,
+        "category": "Card",
+        "title": "Card Design 1",
+        "image": "../../public/images/img/masonry-portfolio/masonry-portfolio-5.jpg",
+        "description": "A brief description of Card Design 1"
+      },
+      {
+        "id": 6,
+        "category": "Card",
+        "title": "Card Design 2",
+        "image": "../../public/images/img/masonry-portfolio/masonry-portfolio-8.jpg",
+        "description": "A brief description of Card Design 1"
+      },
+      {
+        "id": 7,
+        "category": "Card",
+        "title": "Card Design 3",
+        "image": "../../public/images/img/masonry-portfolio/masonry-portfolio-3.jpg",
+        "description": "A brief description of Card Design 1"
+      },
+      {
+        "id": 8,
+        "category": "App",
+        "title": "App Project 2",
+        "image": "../../public/images/img/masonry-portfolio/masonry-portfolio-6.jpg",
+        "description": "A brief description of App Project 2"
+      },
+      {
+        "id": 9,
+        "category": "App",
+        "title": "App Project 3",
+        "image": "../../public/images/img/masonry-portfolio/masonry-portfolio-9.jpg",
+        "description": "A brief description of App Project 2"
+      }
+    ]
+  }
+  

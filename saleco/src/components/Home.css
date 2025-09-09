@@ -1,0 +1,31 @@
+/* Define the keyframe animation for the wave movement */
+@keyframes wave-motion {
+    0% {
+      transform: translateX(0);
+    }
+    100% {
+      transform: translateX(-300px);
+    }
+  }
+
+  /* Apply animation to the waves */
+  .wave1, .wave2, .wave3, .wave4 {
+    animation: wave-motion 10s linear infinite;
+  }
+
+  /* Slight delay for each wave to create a smooth motion effect */
+  .wave1 {
+    animation-delay: 0s;
+  }
+
+  .wave2 {
+    animation-delay: 2s;
+  }
+
+  .wave3 {
+    animation-delay: 4s;
+  }
+
+  .wave4 {
+    animation-delay: 6s;
+  }

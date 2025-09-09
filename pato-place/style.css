@@ -1,0 +1,993 @@
+/* Import custom font */
+@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&family=Open+Sans:ital,wght@0,300..800;1,300..800&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Courgette&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
+
+/* Body font family */
+body {
+  font-family: 'Roboto', sans-serif;
+}
+
+/* Full-width background for navbar */
+.navbar-wrapper {
+  width: 100%;
+  background-color: rgba(0, 0, 0, 0.7);
+  
+  /* Semi-transparent background */
+}
+
+/* Navbar Container */
+.navbar-container .navbar {
+  background-color: transparent;
+  position: fixed;
+
+}
+/* Navbar ko fixed karne ke liye */
+
+/* Scroll par background color change ka workaround */
+
+
+
+/* Navbar brand logo */
+.navbar-brand img {
+  width: 70px;
+}
+
+/* Center navbar items and set font size */
+.navbar-nav {
+  justify-content: center;
+  gap: 15px;
+}
+
+.navbar-nav .nav-link {
+  color: white !important;
+  font-size: 10px;
+  padding: 5px 10px;
+  transition: color 0.3s;
+}
+
+.navbar-nav .nav-link:hover {
+  color: rgb(141, 59, 59) !important;
+}
+
+/* Social Icons Styling */
+.social-icons {
+  display: flex;
+  align-items: center;
+}
+
+.social-icons a {
+  color: white;
+  margin-left: 15px;
+  font-size: 1.2rem;
+  transition: color 0.3s;
+}
+
+.social-icons a:hover {
+  color: rgb(138, 67, 67);
+}
+
+.btn-show-sidebar {
+  background-color: transparent;
+  border: none;
+  color: white;
+  font-size: 1.5rem;
+  cursor: pointer;
+  margin-left: 20px;
+}
+
+/* Offcanvas Sidebar Styles */
+.offcanvas {
+  width: 230px !important;
+
+}
+
+
+.offcanvas-header .offcanvas-title {
+  font-size: 12px;
+  color: #f8f9fa;
+}
+
+.offcanvas-menu {
+  list-style: none;
+  padding: 0;
+}
+
+.offcanvas-menu li {
+  margin: 2px 0;
+}
+
+.offcanvas-menu a {
+  color: #ccc;
+  text-decoration: none;
+  font-size: 12px;
+  transition: color 0.3s;
+}
+
+.offcanvas-menu a:hover {
+  color: rgb(137, 78, 78);
+}
+
+.ofcan {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.ofca {
+  margin-left: 40px;
+}
+
+.gallery-ofcan {
+  color: black;
+
+}
+
+/* Style for the Gallery Title */
+.gallery-title {
+  font-weight: bold;
+
+  margin-left: 60px;
+}
+
+/* Gallery Image Hover Effect */
+.gallery-image-wrapper {
+  position: relative;
+  overflow: hidden;
+}
+
+.gallery-image-wrapper img {
+  transition: transform 0.3s ease;
+}
+
+.gallery-image-wrapper::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  transition: opacity 0.3s ease;
+}
+.texttransform{
+  text-transform: uppercase !important;
+  letter-spacing: 5px;
+}
+.gallery-image-wrapper:hover img {
+  transform: scale(1.1);
+  /* Slight zoom effect on hover */
+}
+
+.gallery-image-wrapper:hover::before {
+  opacity: 1;
+  /* Red overlay effect on hover */
+}
+
+
+/* Gallery image hover effect */
+.container .row .col-4 img {
+  position: relative;
+  transition: transform 0.3s ease, filter 0.3s ease;
+}
+
+/* Style for Carousel Controls (Navigation Arrows) */
+.carousel-control-prev-icon,
+.carousel-control-next-icon {
+  background-color: rgba(0, 0, 0, 0.5);
+  /* Dark background for better visibility */
+  border-radius: 50%;
+  padding: 10px;
+}
+
+.carousel-control-prev,
+.carousel-control-next {
+  width: 5%;
+  /* Adjust width for easier clicking */
+}
+
+/* Carousel Indicators Styling */
+.carousel-indicators [data-bs-target] {
+  width: 10px;
+  height: 10px;
+  background-color: rgba(0, 0, 0, 0.5);
+  /* Dark color for better visibility */
+  border-radius: 50%;
+  /* Rounded dots */
+}
+
+.carousel-indicators .active {
+  background-color: #ff0000;
+  /* Highlight active indicator in red */
+}
+
+.container .row .col-4 img:hover {
+  transform: scale(1.05);
+  /* Slightly enlarge the image */
+  filter: brightness(0.7) sepia(1) hue-rotate(330deg) saturate(10);
+  /* Red color effect */
+}
+
+/* Transparent navbar background */
+.navbar {
+  background-color: transparent;
+  position: absolute;
+  width: 100%;
+  z-index: 100;
+ 
+}
+
+/* Slider text and button styling */
+.carousel-caption {
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  text-align: center;
+}
+
+.carousel-caption h1, h3 {
+  color: #fff;
+  font-size: 3rem;
+  animation: fadeInDown 1.5s ease;
+}
+
+.carousel-caption p {
+  color: #fff;
+  font-size: 1.5rem;
+  animation: fadeInUp 2s ease;
+}
+
+.carousel-caption .btn {
+  background-color:#fff ;
+  color: #ff3333;
+  animation: fadeInUp 2.5s ease;
+  font-size: 10px;
+  text-transform: uppercase;
+  font-weight: 400;
+}
+
+/* Animation effects */
+@keyframes fadeInDown {
+  0% {
+    opacity: 0;
+    transform: translateY(-20px);
+  }
+
+  100% {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+@keyframes fadeInUp {
+  0% {
+    opacity: 0;
+    transform: translateY(20px);
+  }
+
+  100% {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+/* Restaurant Section Styling */
+.resture {
+  margin-top: 50px;
+  /* Add margin-top for spacing */
+}
+
+.restaurant-type {
+  color: brown;
+  font-style: italic;
+}
+
+.welcome-title {
+  font-weight: bold;
+  font-size: 2.5em;
+}
+
+.description {
+  font-size: 13px;
+  color: #555;
+  max-width: 400px;
+  line-height: 1.5;
+  text-align: center;
+}
+
+.story-link {
+  cursor: pointer;
+  text-decoration: none;
+  font-weight: 400;
+}
+
+
+
+/* Image zoom effect on hover */
+.picc {
+  transition: transform 0.3s ease;
+  /* Smooth transition for zoom */
+}
+
+.image-container:hover .picc {
+  transform: scale(1.1);
+  /* Zoom image on hover */
+}
+
+/* banner style */
+
+.banner-image{
+  background-image: url(./images/bg-intro-01.jpg);
+  background-size: cover;
+background-position: center 60.3333px;
+  background-attachment: fixed;
+  height: 50vh;
+  width: 100%;
+  background-repeat: no-repeat;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  text-transform: uppercase;
+  flex-direction: column;
+  margin-top: 100px;
+}
+.banner-image span, .carousel-caption h3, .restaurant-type{
+  font-family:Courgette ;
+}
+
+/* card style */
+.card-body a{
+  text-decoration: none;
+  color: #555;
+}
+.card-body p{
+  font-family:Poppins ;
+  font-weight: 400;
+  font-size: 10px;
+}
+.card-body h5{
+  font-family:Montserrat ;
+}
+.cards{
+  display: flex;
+  justify-content: center;
+}
+/* Make the card image zoom slightly on hover */
+/* Ensure the image container hides overflow */
+
+
+/* Image zoom effect on hover */
+
+
+.picc {
+  transition: .7s;
+}
+
+.picc:hover {
+  transform: scale(1.2);
+}
+
+/* Change the heading color */
+.card-title {
+  color: #333;
+  /* Default color */
+  transition: color 0.3s ease;
+  text-transform: uppercase;
+  font-size: 16px;
+}
+
+.card-title:hover {
+  color: rgb(173, 62, 62);
+}
+
+/* Style for the Learn More link */
+.card a {
+  color: #333;
+  /* Default color */
+  font-weight: bold;
+  text-decoration: none;
+  transition: color 0.3s ease;
+}
+
+/* Learn More text styling */
+.card a {
+  color: #333;
+  /* Default color */
+  
+  text-transform: uppercase;
+  /* Transform text to uppercase */
+  font-size: 0.6rem;
+  /* Slightly reduce font size */
+  text-decoration: none;
+  transition: color 0.3s ease;
+}
+
+/* Add space between text and icon */
+.card a i {
+  margin-left: 5px;
+  /* Add space between text and icon */
+  font-size: 0.7rem;
+  /* Slightly smaller icon size */
+  color: inherit;
+  /* Inherit color from the link */
+  transition: color 0.3s ease;
+}
+
+/* Change color of link and icon on hover */
+.card a:hover {
+  color: rgb(222, 110, 110);
+}
+
+.card a:hover i {
+  color: rgb(174, 75, 75);
+}
+
+/* menu styling */
+#menu{
+  margin-top: 60px;
+  background-color: #F4F1EB;
+  
+}
+.tit5 {
+  font-family: Poppins;
+  font-weight: 700;
+  font-size: 30px;
+  line-height: 1.2;
+  color: #222222;
+  text-transform: uppercase;
+  letter-spacing: 10px;
+  word-spacing: 8px;
+}
+
+.t-center {
+  text-align: center;
+}
+
+.m-t-2 {
+  margin-top: 2px;
+}
+.tit2 {
+  font-family: Courgette;
+  font-size: 30px;
+  line-height: 1.2;
+  color: #d61c22;
+}
+
+.t-center {
+  text-align: center;
+}
+.bg2-pattern {
+  background-image: url(./images/pattern1.png);
+  background-repeat: repeat;
+}
+.hov-img-zoom {
+  display: block;
+  overflow: hidden;
+}
+
+.bo-rad-10 {
+  border-radius: 10px;
+}
+
+.pos-relative {
+  position: relative;
+}
+
+.m-t-30 {
+  margin-top: 30px;
+}
+
+
+.section-ourmenu {
+  padding: 60px 0;
+}
+
+.item-ourmenu {
+  overflow: hidden;
+  position: relative;
+  border-radius: 10px;
+  width: 100%;
+  /* Ensures images are 90% of their container */
+  margin: 0 auto 10px auto;
+  /* Centers the item within its column and adds 10px space between items */
+  transition: transform 0.3s;
+}
+
+
+.item-ourmenu img {
+  width: 100%;
+  border-radius: 10px;
+  display: block;
+}
+
+.btn-overlay {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  background-color: rgba(255, 255, 255, 0.9);
+  /* White background before hover */
+  color: #000;
+  /* Black text before hover */
+  padding: 10px 20px;
+  border-radius: 5px;
+  text-decoration: none;
+  opacity: 1;
+  /* Visible before hover */
+  transition: background-color 0.3s, color 0.3s;
+}
+
+.item-ourmenu:hover .btn-overlay {
+  background-color: rgba(240, 78, 48, 0.9);
+  /* Red background on hover */
+  color: #fff;
+  /* White text on hover */
+}
+.w-menu{
+  width: 80%;
+}
+
+
+/* booking style */
+.bg3-pattern{
+  background-image: url('./images/pattern1.png')
+  
+  
+}
+.container1{
+ 
+  padding: 60px 90px;
+}
+.txt9 {
+  font-family: Montserrat;
+  font-weight: 400;
+  font-size: 15px;
+  color: #555555;
+}
+.bo-rad-10 {
+  border-radius: 10px;
+}
+
+.bo2 {
+  border: 2px solid #d9d9d9;
+}
+
+.size12 {
+  width: 100%;
+  height: 40px;
+}
+
+.txt10 {
+  font-family: Montserrat;
+  font-weight: 400;
+  font-size: 14px;
+  color: #666666;
+}
+
+.pos-relative {
+  position: relative;
+}
+
+.m-b-23 {
+  margin-bottom: 12px;
+}
+
+.m-t-3 {
+  margin-top: 3px;
+}
+
+.btn3 {
+  background-color: #111111;
+  border-radius: 10px;
+  border: none;
+}
+
+.size13 {
+  width: 150px;
+  height: 40px;
+}
+
+.txt11 {
+  font-family: Montserrat;
+  font-weight: 400;
+  font-size: 12px;
+  line-height: 1.1;
+  color: white;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+}
+.p-b-30 {
+  padding-bottom: 30px;
+}
+
+.p-t-18 {
+  padding-top: 18px;
+}
+
+/* style review */
+.tit8 {
+  font-family: Poppins;
+  font-weight: 700;
+  font-size: 50px;
+  line-height: 1.2;
+  color: #222222;
+  text-transform: uppercase;
+  letter-spacing: 11px;
+}
+
+.t-center {
+  text-align: center;
+}
+
+.p-r-15 {
+  padding-right: 15px;
+}
+
+.p-l-20 {
+  padding-left: 20px;
+}
+
+.p-t-3 {
+  padding-top: 3px;
+}
+.p-t-115 {
+  padding-top: 60px;
+}
+wrap-slick1,
+.wrap-slick2,
+.wrap-slick3 {
+  position: relative;
+}
+/* style events */
+
+
+
+/* styling signup */
+
+
+
+
+.flex-c-m {
+
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.flex-w {
+  flex-wrap: wrap;
+}
+.p-r-5 {
+  padding-right: 5px;
+}
+
+
+.p-l-5 {
+  padding-left: 5px;
+}
+.bg1-pattern {
+  background-image: url(./images/pattern1.png);
+  background-repeat: repeat;
+ height: 200px;
+}
+
+.p-b-85 {
+  padding-bottom: 85px;
+}
+
+.p-t-85 {
+  padding-top: 85px;
+}
+.m-10 {
+  margin: 10px;
+}
+
+.txt5 {
+  font-family: Poppins;
+  font-weight: 500;
+  font-size: 22px;
+  color: #333333;
+  text-transform: uppercase;
+  letter-spacing: 3px;
+}
+.bo-rad-10 {
+  border-radius: 10px;
+}
+
+.bo2 {
+  border: 2px solid #d9d9d9;
+}
+
+.size17 {
+  width: 270px;
+  height: 50px;
+}
+
+.m-10 {
+  margin: 10px;
+}
+
+.txt10 {
+  font-family: Montserrat;
+  font-weight: 400;
+  font-size: 14px;
+  color: #666666;
+}
+
+.bgwhite {
+  background-color: white;
+}
+
+.pos-relative {
+  position: relative;
+}
+.bo-rad-10 {
+  border-radius: 10px;
+}
+
+.txt10 {
+  font-family: Montserrat;
+  font-weight: 400;
+  font-size: 14px;
+  color: #666666;
+}
+
+.sizefull {
+  width: 100%;
+  height: 100%;
+}
+
+.p-l-20 {
+  padding-left: 20px;
+}
+
+input {
+  outline: none;
+  border: none !important;
+}
+.ab-r-m {
+  position: absolute;
+  right: 0px;
+  top: 50%;
+  transform: translateY(-50%);
+}
+
+.m-r-18 {
+  margin-right: 18px;
+}
+
+.fa {
+  display: inline-block;
+  font: normal normal normal 14px / 1 FontAwesome;
+  font-size: inherit;
+  text-rendering: auto;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+.fa-envelope:before {
+  content: "\f0e0";
+}
+.btn3 {
+  background: #111111;
+  border-radius: 10px;
+}
+.btn3:hover{
+  background: #d61c22;
+  
+}
+
+.size18 {
+  width: 160px;
+  height: 40px;
+}
+
+.m-10 {
+  margin: 10px;
+}
+
+.txt11 {
+  font-family: Montserrat;
+  font-weight: 400;
+  font-size: 12px;
+  line-height: 1.1;
+  color: white;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+}
+
+.flex-c-m {
+  
+  display: flex;
+  justify-content: center;
+  -ms-align-items: center;
+  align-items: center;
+}
+
+.trans-0-4 {
+  -webkit-transition: all 0.4s;
+  -o-transition: all 0.4s;
+  -moz-transition: all 0.4s;
+  transition: all 0.4s;
+}
+
+/* style footer */
+
+.bg2 {
+  background-color: #111111;
+}
+.flex-sb-m {
+ 
+  display: flex;
+  justify-content: space-between;
+  -ms-align-items: center;
+  align-items: center;
+}
+
+.flex-w {
+ 
+  display: flex;
+  flex-wrap: wrap;
+}
+
+.p-b-22 {
+  padding-bottom: 10px;
+}
+
+.p-t-22 {
+  padding-top: 10px;
+}
+.p-b-5 {
+  padding-bottom: 5px;
+}
+
+.p-t-5 {
+  padding-top: 5px;
+}
+.txt17 {
+  font-family: Noto + Sans;
+  font-size: 14px;
+  line-height: 1.7;
+  color: #999999;
+}
+
+.p-r-20 {
+  padding-right: 20px;
+}
+
+.p-b-5 {
+  padding-bottom: 5px;
+}
+
+.p-t-5 {
+  padding-top: 5px;
+
+}
+.txt18 {
+  font-family: Noto + Sans;
+  font-size: 14px;
+  line-height: 1.7;
+  color: #cccccc;
+}
+
+a {
+  font-family: Montserrat;
+  font-weight: 400;
+
+}
+.c-white {
+  color: white;
+}
+
+.fs-15 {
+  font-size: 15px;
+  
+}
+.fa {
+  display: inline-block;
+  font: normal normal normal 14px / 1 ;
+  font-size: inherit;
+  text-rendering: auto;
+  gap: 10px;
+}
+.bg1 {
+  background-color: #222222;
+}
+.p-b-70 {
+  padding-bottom: 20px;
+}
+
+.p-t-40 {
+  padding-top: 20px;
+}
+.row {
+ 
+  display: flex;
+  -ms-flex-wrap: wrap;
+  flex-wrap: wrap;
+  margin-right: -15px;
+  margin-left: -15px;
+}
+.p-t-50 {
+  padding-top: 10px;
+}
+.txt13 {
+  font-family: Poppins;
+  font-weight: 500;
+  font-size: 18px;
+  color: white;
+  text-transform: uppercase;
+  letter-spacing: 2px;
+}
+.m-b-70 {
+  margin-bottom: 60px;
+ 
+}
+
+ul,
+li {
+  margin: 0px;
+  list-style-type: none;
+}
+
+.m-b-32 {
+  margin-bottom: 20px;
+}
+.txt14 {
+  font-family: Montserrat;
+  font-weight: 400;
+  font-size: 10px;
+  color: #999999;
+  line-height: 1.7;
+}
+
+ul,
+li {
+  margin: 0px;
+  list-style-type: none;
+}
+.m-b-25 {
+  margin-bottom: 15px;
+}
+.color2 {
+  color: #cccccc;
+}
+
+.m-r-5 {
+  margin-right: 5px;
+}
+
+.fs-13 {
+  font-size: 13px;
+}
+.txt15 {
+  font-family: Montserrat;
+  font-weight: 400;
+  font-size: 13px;
+  color: #ec1d25;
+  line-height: 1.7;
+  font-size: 9px;
+}
+.txt16 {
+  font-family: Montserrat;
+  font-weight: 400;
+  font-size: 12px;
+  color: #555555;
+}
+.item-gallery-footer {
+  display: block;
+  position: relative;
+  width: calc((100% - 50px) / 4);
+  margin-right: 10px;
+  margin-bottom: 10px;
+}
+
+
+
+
+a {
+ 
+  text-decoration: none;
+  background-color: transparent;
+
+}
+.m-b-18{
+  margin-bottom: 5px;
+}

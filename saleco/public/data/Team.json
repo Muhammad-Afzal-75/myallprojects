@@ -1,0 +1,31 @@
+[
+    {
+      "id": 1,
+      "name": "Walter White",
+      "position": "Chief Executive Officer",
+      "image": "../../public/images/img/team/team-1.jpg"
+    
+    },
+    {
+      "id": 2,
+      "name": "Sarah Jhonson",
+      "position": "Sarah Jhonson",
+      "image": "../../public/images/img/team/team-2.jpg"
+    
+    },
+    {
+      "id": 3,
+      "name": "William Anderson",
+      "position": "CTO",
+      "image": "../../public/images/img/team/team-3.jpg"
+ 
+    },
+    {
+      "id": 4,
+      "name": "Amanda Jepson",
+      "position": "Accountant",
+      "image": "../../public/images/img/team/team-4.jpg"
+    
+    }
+  ]
+  

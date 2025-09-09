@@ -1,0 +1,69 @@
+{
+    "items": [
+      {
+        "name": "Home",
+        "id":"#home",
+        "link": "/home"
+      },
+      {
+        "name": "About",
+        "id":"#about",
+        "link": "/about"
+      },
+      {
+        "name": "Services",
+        "id":"#services",
+        "link": "/services"
+      },
+      {
+        "name": "Portfolio",
+        "id":"#portfolio",
+        "link": "/portfolio"
+      },
+      {
+        "name": "Team",
+        "id":"#team",
+        "link": "/team"
+      },
+      {
+        "name": "Blog",
+        "id":"#blog",
+        "link": "/blog"
+      },
+      {
+        "name": "Dropdown",
+        "link": "#",
+        "submenu": [
+          {
+            "name": "Dropdown1",
+            "link": "/dropdown1",
+            "deepmenu": [
+              { "name": "Deepdown1", "link": "/deepdown1" },
+              { "name": "Deepdown2", "link": "/deepdown2" },
+              { "name": "Deepdown3", "link": "/deepdown3" },
+              { "name": "Deepdown4", "link": "/deepdown4" }
+            ]
+          },
+          {
+            "name": "Dropdown2",
+            "link": "/dropdown2"
+          },
+          {
+            "name": "Dropdown3",
+            "link": "/dropdown3"
+          },
+          {
+            "name": "Dropdown4",
+            "link": "/dropdown4"
+          }
+        ]
+      },
+     
+      {
+        "name": "Contact",
+        "id":"#contact",
+        "link": "/contact"
+      }
+    ]
+  }
+  

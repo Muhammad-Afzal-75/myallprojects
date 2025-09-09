@@ -1,0 +1,406 @@
+*{
+    margin: 0;
+    padding: 0;
+}
+/* 1. Global Styles */
+
+/* Apply the specified font family globally */
+body, h1, h5, h6 {
+    font-family: "Netflix Sans", "Helvetica Neue", "Segoe UI", Roboto, Ubuntu, sans-serif;
+    color: white; /* Set text color to white for better contrast */
+    margin: 0;
+    padding: 0;
+}
+
+/* 2. Background Image and Overlay */
+
+/* Set the background image on the body */
+.main {
+    background-image: url('./images/backimage.jpg'); /* Replace with your actual image path */
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    position: relative; /* Establish a positioning context for the overlay */
+    min-height: 100vh; /* Ensure the body takes up the full viewport height */
+    display: flex;
+    flex-direction: column;
+
+    
+}
+
+/* Add a semi-transparent black overlay over the background image */
+.main::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background-color: rgba(0, 0, 0, 0.74); /* 50% opacity black */
+    z-index: 1; /* Place the overlay behind the content */
+}
+
+/* Ensure that the navigation bar and main content appear above the overlay */
+.nav-bar, .marg {
+    position: relative;
+    z-index: 2;
+}
+
+/* 3. Navigation Bar Styles */
+
+.nav-bar {
+    padding: 20px 0;
+}
+
+.dis-li {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+/* Style for the Sign In button */
+.btn1 {
+    background-color: #e50914; /* Netflix red */
+    color: white;
+    border: none;
+    padding: 10px 20px;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+.btn1:hover {
+    background-color: #941d23; /* Darker red on hover */
+}
+
+/* 4. Main Content (.marg) Styles */
+
+.marg {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    padding: 40px 20px;
+    flex: 1; /* Allow the main content to expand and center vertically */
+}
+
+/* Style for headings */
+.marg h1 {
+    font-size: 2.5rem;
+    margin-bottom: 20px;
+}
+
+.marg h5 {
+    font-size: 1.25rem;
+    margin-bottom: 15px;
+}
+
+.marg h6 {
+    font-size: 1rem;
+    margin-bottom: 25px;
+}
+
+/* Style for the input and Get Started button */
+.input-group {
+    display: flex;
+    width: 100%;
+    max-width: 800px;
+}
+
+.input-group input[type="email"] {
+    flex: 1;
+    padding: 15px;
+
+    border-radius: 3px 0 0 3px;
+    font-size: 1rem;
+    background-color: transparent;
+}
+
+.input-group button {
+    padding: 15px 25px;
+    border: none;
+    border-radius: 3px 3px 3px 3px;
+    background-color: #e50914;
+    color: white;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+.input-group button:hover {
+    background-color: #b6262e;
+}
+
+/* 5. Responsive Design */
+
+@media (max-width: 768px) {
+    .dis-li {
+        flex-direction: column;
+        align-items: flex-start;
+    }
+
+    .marg {
+        padding: 20px 10px;
+    }
+
+    .input-group {
+        flex-direction: column;
+    }
+
+    .input-group input[type="email"],
+    .input-group button {
+        width: 100%;
+        border-radius: 3px;
+    }
+
+    .input-group input[type="email"] {
+        margin-bottom: 10px;
+    }
+}
+/* Email Input Styles */
+.email-input {
+    background-color: transparent; /* Make the background transparent */
+   
+    border: 1px solid white; /* Add a border for visibility */
+    padding: 10px;
+    border-radius: 3px 0 0 3px;
+}
+
+/* Button Styles with Icon */
+.btn1 {
+    padding: 10px 20px;
+    background-color: #e50914;
+    color: white;
+    border: none;
+    border-radius:  3px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 5px; /* Space between text and icon */
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+
+
+/* Space between input and button */
+.input-group {
+    display: flex;
+    width: 100%;
+    max-width: 600px;
+    gap: 10px; /* Add 5px space between email input and button */
+}
+
+.input-group button svg {
+    margin-left: 5px; /* Optional: Add extra space between text and icon */
+}
+/* Gradient Line */
+
+.gradient-line { 
+ min-width: 100%;
+
+  
+}
+.gradient-line{
+   
+    
+   
+    
+
+    background: linear-gradient(to right, rgba(33, 13, 22, 1) 16%, rgba(184, 40, 105, 1), rgba(229, 9, 20, 1), rgba(184, 40, 105, 1), rgba(33, 13, 22, 1) 84%);
+height: 5px;
+/* box-shadow: (50% 500% at 50% -420%, rgba(64, 97, 231, 0.4) 80%, rgba(0, 0, 0, 0.1) 100%), black;; */
+box-shadow: 10px 20px 30px rgba(64, 97, 231, 0.4), 0px 0px 10px rgba(0, 0, 0, 0.1);
+
+
+
+}
+
+
+
+.cbc{
+    background-color: black;
+    color: white;
+    height: 300vh;
+    
+} 
+.trad{
+padding-top: 50px;
+    
+}
+
+.button-outline {
+    background-color: transparent;
+    border: 1px solid rgba(255, 255, 255, 0.842);
+    color: white;
+    padding: 8px 20px;
+    text-align: center;
+    text-decoration: none;
+    font-size: 16px;
+    cursor: pointer;
+    border-radius: 5px;
+    margin-top: 10px;
+
+
+}
+
+
+
+  
+ 
+  
+  .wrapper {
+    display: grid;
+    grid-template-columns: repeat(3, 100%);
+    overflow: hidden;
+    scroll-behavior: smooth;
+  }
+  .wrapper section {
+    width: 100%;
+    position: relative;
+    display: grid;
+    grid-template-columns: repeat(5, auto);
+    margin: 20px 0;
+  }
+  .wrapper section .item {
+    padding: 0 2px;
+    transition: 250ms all;
+  }
+  .wrapper section .item:hover {
+    margin: 0 40px;
+    transform: scale(1.2);
+  }
+  .wrapper section a {
+    position: absolute;
+    color: #fff;
+    text-decoration: none;
+    font-size: 6em;
+    background: black;
+    width: 80px;
+    padding: 20px;
+    text-align: center;
+    z-index: 1;
+  }
+  .wrapper section a:nth-of-type(1) {
+    top: 0;
+    bottom: 0;
+    left: 0;
+    background: linear-gradient(-90deg, rgba(0, 0, 0, 0) 0%, black 100%);
+  }
+  .wrapper section a:nth-of-type(2) {
+    top: 0;
+    bottom: 0;
+    right: 0;
+    background: linear-gradient(90deg, rgba(0, 0, 0, 0) 0%, black 100%);
+  }
+  
+  @media only screen and (max-width: 600px) {
+    a.arrow__btn {
+      display: none;
+    }
+  }
+  .card{
+    background: linear-gradient(149deg, #192247 0%, #210e17 96.86%);
+    outline: none !important;
+    border-radius: 15px !important;
+ box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px !important;
+  }
+  .gradient img{
+    margin-left: 200px;
+    margin-top: 20px;
+  }
+ 
+  /* accordian style */
+  .accordion {
+    width: 100%;
+   padding: 4px;
+    border: none;
+}
+
+.accordion input {
+    display: none;
+}
+
+.accordion label {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 22px;
+    background-color: #2D2D2D;
+    cursor: pointer;
+    font-size: 18px;
+    position: relative;
+}
+
+.accordion label:after {
+    content: '\002B'; /* Unicode character for plus sign */
+    font-size: 24px;
+    color: #777;
+    
+}
+
+.accordion input:checked + label:after {
+    content: "\2212"; /* Unicode character for minus sign */
+}
+
+.accordion .content {
+    max-height: 0;
+    overflow: hidden;
+    transition: max-height 0.3s ease-out;
+    padding: 0 18px;
+    background-color: #2D2D2D;
+}
+
+.accordion input:checked ~ .content {
+    max-height: 200px; /* Adjust this value as needed */
+    padding: 18px;
+}
+.accordion :hover{
+    background-color: #414141;
+}
+.content{
+    margin-top: 2px;
+}
+.heading-input{
+    margin: 8px auto;
+}
+.ms{
+    margin-left: 320px;
+}
+.input-group-2{
+    display: flex;
+    max-width: 750px;
+    gap: 10px;
+   
+}
+.tran-email{
+    background-color: transparent !important;
+    height: 50px;
+}
+.btn2{
+    padding: 0px 50px;
+    background-color: #e50914;
+    color: white;
+    border: none;
+    border-radius:  3px;
+    cursor: pointer;
+    
+
+}
+ul li{
+    list-style: none;
+    padding: 5px 0;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+

@@ -1,0 +1,37 @@
+{
+    "links": [
+    
+    ],
+    "socials": [
+      {
+        "platform": "Facebook",
+        "icon": "fab fa-facebook-f",
+        "url": "https://facebook.com"
+      },
+      {
+        "platform": "Twitter",
+        "icon": "fab fa-twitter",
+        "url": "https://twitter.com"
+      },
+      {
+        "platform": "LinkedIn",
+        "icon": "fab fa-linkedin",
+        "url": "https://Pk.linkedin.com"
+      },
+      {
+        "platform": "Skype",
+        "icon": "fab fa-skype",
+        "url": "https://www.skype.com"
+      },
+      {
+        "platform": "Instagram",
+        "icon": "fab fa-instagram",
+        "url": "https://instagram.com"
+      }
+    ],
+    "contact": {
+
+    },
+    "copyright": "© 2025 Seleção. All rights reserved."
+  }
+  

@@ -1,0 +1,35 @@
+{
+    "services": [
+      {
+        "icon": "ImFileText",
+        "title": "Document Management",
+        "description": "Efficiently manage your documents with our secure solutions."
+      },
+      {
+        "icon": "ImCreditCard",
+        "title": "Payment Processing",
+        "description": "Fast and secure payment solutions for your business."
+      },
+      {
+        "icon": "TfiCommentAlt",
+        "title": "Customer Support",
+        "description": "24/7 support to address all customer inquiries."
+      },
+      {
+        "icon": "TfiFolder",
+        "title": "File Storage",
+        "description": "Organize and store your files with ease."
+      },
+      {
+        "icon": "LuEarth",
+        "title": "Global Reach",
+        "description": "Expand your business with our international services."
+      },
+      {
+        "icon": "IoMdTime",
+        "title": "Time Management",
+        "description": "Optimize your workflow with our time-saving tools."
+      }
+    ]
+  }
+  

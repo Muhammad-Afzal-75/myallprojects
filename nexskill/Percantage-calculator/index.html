@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <h1 id="change">Percantage calculater</h1>
+    <form onsubmit="Percantagecalc();return false";>
+        <label for="tm">Total Marks</label>
+        <input type="number"name='tm' placeholder="Enter your tm" id="tm1" required>
+        <label for="obt">obt Marks</label>
+        <input type="number"name='obt' placeholder="Enter your obt" id="obt1" required>
+        <button  type="submit" onclick="Percantagecalc()">submit</button>
+    </form>
+
+
+
+
+    <script>
+function Percantagecalc(){
+
+    let stdTmMarks = document.getElementById("tm1").value;  
+    let stdObtMarks = document.getElementById("obt1").value;
+    let res =(stdObtMarks/stdTmMarks)*100
+    document.getElementById("change").innerHTML = ("you have got it"+res+"%")
+    console.log("you have got it"+res+"%")
+}
+
+    </script>
+</body>
+</html>

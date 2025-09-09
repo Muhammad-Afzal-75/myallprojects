@@ -1,0 +1,13 @@
+.portfolio-item {
+    position: relative;
+    overflow: hidden;
+  }
+  
+  .portfolio-overlay {
+    transform: translateY(100%);
+  }
+  
+  .portfolio-item:hover .portfolio-overlay {
+    transform: translateY(0);
+  }
+  
