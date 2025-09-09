@@ -1,0 +1,25 @@
+# Node.js dependencies
+node_modules/
+
+# Build output
+dist/
+build/
+.next/
+out/
+
+# Environment files (secret keys waghera)
+.env
+.env.local
+.env.*.local
+
+# Logs
+*.log
+logs/
+
+# System files
+.DS_Store
+Thumbs.db
+
+# Editor settings
+.vscode/
+.idea/
