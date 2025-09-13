@@ -1,0 +1,673 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Pato Place</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.6.0/css/all.min.css"
+        integrity="sha512-Kc323vGBEqzTmouAECnVceyQqyqdsSiqLQISBL29aUW4U/M7pSPA/gEUZQqv1cwx4OnYxTxve5UMg5GT6L4JJg=="
+        crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <link rel="stylesheet" href="style.css"> <!-- Link to external CSS file -->
+</head>
+
+<body>
+    <!-- Transparent Navbar -->
+    <div class="navbar-wrapper">
+        <header class="navbar-container">
+            <nav class="navbar navbar-expand-lg">
+                <div class="container">
+                    <a class="navbar-brand text-white" href="#">
+                        <img src="./images/logo (2).png" alt="Logo" width="70">
+                    </a>
+                    <button class="navbar-toggler" type="button" data-bs-toggle="collapse"
+                        data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent"
+                        aria-expanded="false" aria-label="Toggle navigation">
+                        <span class="navbar-toggler-icon"></span>
+                    </button>
+                    <div class="collapse navbar-collapse" id="navbarSupportedContent">
+                        <ul class="navbar-nav mx-auto mb-2 mb-lg-0">
+                            <li class="nav-item"><a class="nav-link text-white" href="#">HOME</a></li>
+                            <li class="nav-item"><a class="nav-link text-white" href="#">MENU</a></li>
+                            <li class="nav-item"><a class="nav-link text-white" href="#">RESERVATION</a></li>
+                            <li class="nav-item"><a class="nav-link text-white" href="#">GALLERY</a></li>
+                            <li class="nav-item"><a class="nav-link text-white" href="#">ABOUT</a></li>
+                            <li class="nav-item"><a class="nav-link text-white" href="#">BLOG</a></li>
+                            <li class="nav-item"><a class="nav-link text-white" href="#">CONTACT</a></li>
+                        </ul>
+                        <div class="social-icons">
+                            <a href="#"><i class="fa-brands fa-facebook fa-sm text-white"></i></a>
+                            <a href="#"><i class="fa-brands fa-twitter fa-sm text-white"></i></a>
+                            <button class="btn-show-sidebar" data-bs-toggle="offcanvas"
+                                data-bs-target="#offcanvasScrolling" aria-controls="offcanvasScrolling">
+                                <i class="fa-solid fa-bars text-white"></i>
+                            </button>
+                        </div>
+                    </div>
+                </div>
+            </nav>
+        </header>
+    </div>
+
+    <!-- Slider Section Below Navbar -->
+    <div id="carouselExampleFade" class="carousel slide carousel-fade" data-bs-ride="carousel">
+        <!-- Carousel Indicators -->
+        <div class="carousel-indicators">
+            <button type="button" data-bs-target="#carouselExampleFade" data-bs-slide-to="0" class="active"
+                aria-current="true" aria-label="Slide 1"></button>
+            <button type="button" data-bs-target="#carouselExampleFade" data-bs-slide-to="1"
+                aria-label="Slide 2"></button>
+            <button type="button" data-bs-target="#carouselExampleFade" data-bs-slide-to="2"
+                aria-label="Slide 3"></button>
+        </div>
+
+        <div class="carousel-inner">
+            <!-- Slide 1 -->
+            <div class="carousel-item active">
+                <img src="./images/master-slides-01.jpg" class="d-block w-100" alt="Slider Image 1">
+                <div class="carousel-caption">
+                    <h3><i>Welcome to</i></h3>
+                    <h1 class="texttransform">Pato Place</h1>
+                    <a href="#" class="btn ">Look Menu</a>
+                </div>
+            </div>
+            <!-- Slide 2 -->
+            <div class="carousel-item">
+                <img src="./images/master-slides-02.jpg" class="d-block w-100" alt="Slider Image 2">
+                <div class="carousel-caption">
+                    <h3><i>Welcome to</i></h3>
+                    <h1 class="texttransform">Pato Place</h1>
+                    <a href="#" class="btn ">Look Menu</a>
+                </div>
+            </div>
+            <!-- Slide 3 -->
+            <div class="carousel-item">
+                <img src="./images/slide1-01.jpg.webp" class="d-block w-100" alt="Slider Image 3">
+                <div class="carousel-caption">
+                    <h3><i>Welcome to</i></h3>
+                    <h1 class="texttransform">Pato Place</h1>
+                    <a href="#" class="btn">Look Menu</a>
+                </div>
+            </div>
+        </div>
+
+        <!-- Carousel Controls (Toggle Buttons) -->
+        <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleFade" data-bs-slide="prev">
+            <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+            <span class="visually-hidden">Previous</span>
+        </button>
+        <button class="carousel-control-next" type="button" data-bs-target="#carouselExampleFade" data-bs-slide="next">
+            <span class="carousel-control-next-icon" aria-hidden="true"></span>
+            <span class="visually-hidden">Next</span>
+        </button>
+    </div>
+
+
+    <!-- Offcanvas Sidebar -->
+    <div class="offcanvas offcanvas-end" tabindex="-1" id="offcanvasScrolling"
+        aria-labelledby="offcanvasScrollingLabel">
+        <div class="offcanvas-header">
+            <h5 class="offcanvas-title" id="offcanvasScrollingLabel">Menu</h5>
+            <button type="button" class="btn-close" data-bs-dismiss="offcanvas" aria-label="Close"></button>
+        </div>
+        <div class="offcanvas-body">
+            <ul class="offcanvas-menu ofcan">
+                <li><a href="#">ABOUT</a></li>
+                <li><a href="#">HOME</a></li>
+                <li><a href="#">CONTACT</a></li>
+                <li><a href="#">BLOG</a></li>
+                <li><a href="#">MENU</a></li>
+                <li><a href="#">GALLERY</a></li>
+            </ul>
+            <button class="bg-dark text-white rounded ofca px-2">RESERVATION</button>
+            <!-- Gallery Section -->
+            <p class="gallery-title mt-3">GALLERY</p>
+            <div class="gallery-row row">
+                <div class="col-4">
+                    <div class="gallery-image-wrapper">
+                        <img src="./images/photo-gallery-02 (1).jpg" class="img-fluid mb-2" alt="Gallery Image 1">
+                    </div>
+                </div>
+                <div class="col-4">
+                    <div class="gallery-image-wrapper">
+                        <img src="./images/photo-gallery-03 (1).jpg" class="img-fluid mb-2" alt="Gallery Image 2">
+                    </div>
+                </div>
+                <div class="col-4">
+                    <div class="gallery-image-wrapper">
+                        <img src="./images/photo-gallery-05 (1).jpg" class="img-fluid mb-2" alt="Gallery Image 3">
+                    </div>
+                </div>
+                <div class="col-4">
+                    <div class="gallery-image-wrapper">
+                        <img src="./images/photo-gallery-thumb-01 (1).jpg" class="img-fluid mb-2" alt="Gallery Image 4">
+                    </div>
+                </div>
+                <div class="col-4">
+                    <div class="gallery-image-wrapper">
+                        <img src="./images/photo-gallery-thumb-02 (1).jpg" class="img-fluid mb-2" alt="Gallery Image 5">
+                    </div>
+                </div>
+                <div class="col-4">
+                    <div class="gallery-image-wrapper">
+                        <img src="./images/photo-gallery-thumb-03 (1).jpg" class="img-fluid mb-2" alt="Gallery Image 6">
+                    </div>
+                </div>
+            </div>
+
+
+        </div>
+    </div>
+
+
+    <!-- Restaurant Section -->
+    <section class="container resture my-5">
+        <div class="row align-items-center">
+            <!-- Text Column -->
+            <div
+                class="col-12 col-md-6 d-flex flex-column justify-content-center align-items-center text-center mb-4 mb-md-0">
+                <h2 class="restaurant-type"><i>Italian Restaurant</i></h2>
+                <h1 class="welcome-title">Welcome</h1>
+                <p class="description" style="max-width: 500px;">
+                    Donec quis lorem nulla. Nunc eu odio mi. Morbi nec lobortis est. Sed fringilla, nunc sed imperdiet
+                    lacinia, nisl ante egestas mi, ac facilisis ligula sem id neque.
+                </p>
+                <span class="story-link">Our Story <i class="fa-solid fa-arrow-right fa-sm"></i></span>
+            </div>
+
+
+            <!-- Image Column -->
+            <div class="col-12 col-md-6 d-flex justify-content-center">
+                <div class="card border-0 h-100" style="max-width: 400px; width: 100%;">
+                    <div class="rounded overflow-hidden">
+                        <img src="./images/our-story-01.jpg" class="card-img-top picc img-fluid" alt="...">
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+
+
+    <!-- banner section -->
+    <section>
+        <div class="banner-image ">
+            <span class="text-danger">Discover</span>
+            <h3>pato place</h3>
+
+        </div>
+    </section>
+
+
+    <!-- section card -->
+    <section class="container my-5">
+        <div class="row g-4 justify-content-center">
+            <!-- Card 1 -->
+            <div class="col-12 col-sm-6 col-md-4 d-flex justify-content-center">
+                <div class="card border-0 h-100" style="max-width: 18rem;">
+                    <div class="rounded overflow-hidden">
+                        <img src="./images/intro-01.jpg" class="card-img-top picc img-fluid" alt="...">
+                    </div>
+                    <div class="card-body py-2 px-0 text-center">
+                        <h5 class="card-title">Romantic Restaurant</h5>
+                        <p class="card-text">Phasellus lorem enim, luctus ut velit eget, con-vallis egestas eros..</p>
+                        <a href="#">Learn More <i class="fa-solid fa-arrow-right fa-sm"></i></a>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Card 2 -->
+            <div class="col-12 col-sm-6 col-md-4 d-flex justify-content-center">
+                <div class="card border-0 h-100" style="max-width: 18rem;">
+                    <div class="rounded overflow-hidden">
+                        <img src="./images/intro-02.jpg" class="card-img-top picc img-fluid" alt="...">
+                    </div>
+                    <div class="card-body py-2 px-0 text-center">
+                        <h5 class="card-title">Delicious Food</h5>
+                        <p class="card-text">Aliquam eget aliquam magna, quis posuere risus ac justo ipsum nibh urna</p>
+                        <a href="#">Learn More <i class="fa-solid fa-arrow-right fa-sm"></i></a>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Card 3 -->
+            <div class="col-12 col-sm-6 col-md-4 d-flex justify-content-center">
+                <div class="card border-0 h-100" style="max-width: 18rem;">
+                    <div class="rounded overflow-hidden">
+                        <img src="./images/intro-04.jpg" class="card-img-top picc img-fluid" alt="...">
+                    </div>
+                    <div class="card-body py-2 px-0 text-center">
+                        <h5 class="card-title">Red Wines You Love</h5>
+                        <p class="card-text">Sed ornare ligula eget tortor tempor, quis porta tellus dictum.</p>
+                        <a href="#">Learn More <i class="fa-solid fa-arrow-right fa-sm"></i></a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+
+    <!-- section menu -->
+    <section class="section-ourmenu bg2-pattern p-t-115 p-b-120">
+        <div class="container w-menu">
+            <div class="title-section-ourmenu text-center mb-5">
+                <span class="tit2 d-block">Discover</span>
+                <h3 class="tit5 mt-2">Our Menu</h3>
+            </div>
+
+            <div class="row">
+                <div class="col-md-8">
+                    <div class="row">
+                        <div class="col-sm-6 mb-4">
+                            <div class="item-ourmenu position-relative" style="overflow: hidden;">
+                                <img src="./images/our-menu-01.jpg" class=" rounded picc" alt="IMG-MENU">
+                                <a href="#" class="btn-overlay">Lunch</a>
+                            </div>
+                        </div>
+
+                        <div class="col-sm-6 mb-4">
+                            <div class="item-ourmenu position-relative" style="overflow: hidden;">
+                                <img src="./images/our-menu-05.jpg" class=" rounded picc" alt="IMG-MENU">
+                                <a href="#" class="btn-overlay">Dinner</a>
+                            </div>
+                        </div>
+
+                        <div class="col-12 mb-4">
+                            <div class="item-ourmenu position-relative" style="overflow: hidden;">
+                                <img src="./images/our-menu-13 (17).jpg" class=" rounded picc" alt="IMG-MENU">
+                                <a href="#" class="btn-overlay">Happy Hour</a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="col-md-4">
+                    <div class="row">
+                        <div class="col-12 mb-4">
+                            <div class="item-ourmenu position-relative" style="overflow: hidden;">
+                                <img src="./images/our-menu-08 (1).jpg" class=" rounded picc" alt="IMG-MENU">
+                                <a href="#" class="btn-overlay">Drink</a>
+                            </div>
+                        </div>
+
+                        <div class="col-12 mb-4">
+                            <div class="item-ourmenu position-relative" style="overflow: hidden;">
+                                <img src="./images/our-menu-10.jpg" class=" rounded picc" alt="IMG-MENU">
+                                <a href="#" class="btn-overlay">Starters</a>
+                            </div>
+                        </div>
+
+                        <div class="col-12 mb-4">
+                            <div class="item-ourmenu position-relative" style="overflow: hidden;">
+                                <img src="./images/our-menu-16.jpg" class=" rounded picc" alt="IMG-MENU">
+                                <a href="#" class="btn-overlay">Dessert</a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- events -->
+
+
+    <!-- booking -->
+    <section class="section-booking bg3-pattern p-t-100 p-b-110 mt-5">
+        <div class="container">
+            <div class="row align-items-center">
+                <!-- Left Form -->
+                <div class="col-lg-6 p-b-30">
+                    <div class="text-center mb-4">
+                        <span class="tit2">Reservation</span>
+                        <h3 class="text-dark mb-4">Book table</h3>
+                    </div>
+                    <form class="wrap-form-booking">
+                        <div class="row">
+                            <div class="col-md-6">
+                                <!-- Date -->
+                                <span class="txt9">Date</span>
+                                <input class="form-control mb-3" type="date" name="date">
+
+                                <!-- Time -->
+                                <span class="txt9">Time</span>
+                                <select class="form-select mb-3" name="time">
+                                    <option>9:00</option>
+                                    <option>9:30</option>
+                                    <option>10:00</option>
+                                    <option>10:30</option>
+                                </select>
+
+                                <!-- People -->
+                                <span class="txt9">People</span>
+                                <select class="form-select mb-3" name="people">
+                                    <option>1 person</option>
+                                    <option>2 people</option>
+                                    <option>3 people</option>
+                                </select>
+                            </div>
+
+                            <div class="col-md-6">
+                                <!-- Name -->
+                                <span class="txt9">Name</span>
+                                <input class="form-control mb-3" type="text" name="name" placeholder="Name">
+
+                                <!-- Phone -->
+                                <span class="txt9">Phone</span>
+                                <input class="form-control mb-3" type="text" name="phone" placeholder="Phone">
+
+                                <!-- Email -->
+                                <span class="txt9">Email</span>
+                                <input class="form-control mb-3" type="email" name="email" placeholder="Email">
+                            </div>
+                        </div>
+
+                        <div class="text-center mt-3">
+                            <button type="submit" class="btn btn-dark px-4">Book Table</button>
+                        </div>
+                    </form>
+                </div>
+                <!-- Right Image -->
+                <div class="col-12 col-md-6 d-flex justify-content-center">
+                <div class="card border-0 h-100" style="max-width: 400px; width: 100%;">
+                    <div class="rounded overflow-hidden">
+                        <img src="./images/booking-01.jpg" class="card-img-top picc img-fluid" alt="...">
+                    </div>
+                </div>
+            </div>
+
+
+            </div>
+        </div>
+    </section>
+
+
+    <!-- news -->
+    <div class="mt-5">
+        <div class="title-section-ourmenu text-center mb-5">
+            <span class="tit2 d-block">Latest News</span>
+            <h3 class="tit5 mt-2">The Blog</h3>
+        </div>
+        <section class="container">
+            <div class="row g-4"> <!-- g-4 = gap between cards -->
+
+                <!-- Card 1 -->
+                <div class="col-12 col-md-6 col-lg-4">
+                    <div class="card border-0 h-100" style="width: 100%;">
+                        <div style="overflow: hidden;" class="rounded">
+                            <img src="./images/blog-01.jpg" class="card-img-top picc" alt="...">
+                        </div>
+                        <div class="card-body py-2 px-0">
+                            <h5 class="card-title">Romantic Restaurant</h5>
+                            <p class="card-text">Phasellus lorem enim, luctus ut velit eget, con-vallis egestas eros..
+                            </p>
+                            <a href="#" class="">Learn More <i class="fa-solid fa-arrow-right fa-sm"></i></a>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Card 2 -->
+                <div class="col-12 col-md-6 col-lg-4">
+                    <div class="card border-0 h-100" style="width: 100%;">
+                        <div style="overflow: hidden;" class="rounded">
+                            <img src="./images/blog-02.jpg" class="card-img-top picc" alt="...">
+                        </div>
+                        <div class="card-body py-2 px-0">
+                            <h5 class="card-title">Delicious Food</h5>
+                            <p class="card-text">Aliquam eget aliquam magna, quis posuere risus ac justo ipsum nibh urna
+                            </p>
+                            <a href="#" class="">Learn More <i class="fa-solid fa-arrow-right fa-sm"></i></a>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Card 3 -->
+                <div class="col-12 col-md-6 col-lg-4">
+                    <div class="card border-0 h-100" style="width: 100%;">
+                        <div style="overflow: hidden;" class="rounded">
+                            <img src="./images/blog-03.jpg" class="card-img-top picc" alt="...">
+                        </div>
+                        <div class="card-body py-2 px-0">
+                            <h5 class="card-title">Red Wines You Love</h5>
+                            <p class="card-text">Sed ornare ligula eget tortor tempor, quis porta tellus dictum.</p>
+                            <a href="#" class="">Learn More <i class="fa-solid fa-arrow-right fa-sm"></i></a>
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+        </section>
+    </div>
+
+
+    <!-- signup -->
+    <!-- signup -->
+<!-- signup -->
+<!-- signup -->
+<div class="section-signup bg1-pattern py-5 mt-5">
+  <form class="d-flex flex-column align-items-center px-3">
+    <!-- Heading -->
+    <span class="txt5 mb-3 text-center">Specials Sign up</span>
+
+    <!-- Input box -->
+    <div class="position-relative w-20 w-md-50 mb-3">
+      <input
+        class="form-control rounded-pill ps-4"
+        type="email"
+        name="email-address"
+        placeholder="Email Address"
+      />
+      <i
+        class="fa fa-envelope position-absolute top-50 end-0 translate-middle-y me-3 text-muted"
+        aria-hidden="true"
+      ></i>
+    </div>
+
+    <!-- Button (always stays here, not in footer) -->
+    <button
+      type="submit"
+      class="btn btn-dark rounded-pill px-4 py-2 w-20 w-md-auto"
+    >
+      Sign-up
+    </button>
+  </form>
+</div>
+
+
+
+
+    <!-- footer -->
+    <footer class="bg1">
+        <div class="container p-t-40 p-b-70">
+            <div class="row">
+                <div class="col-sm-6 col-md-4 p-t-50 ">
+                    <!-- - -->
+                    <h4 class="txt13 m-b-33 ms-4 mb-3">
+                        Contact Us
+                    </h4>
+
+                    <ul class="m-b-70 text-white ">
+                        <li class="txt14 m-b-14 text-decoration-none ">
+                            <i class="fa fa-map-marker fs-16 dis-inline-block size19 me-2" aria-hidden="true"></i>
+                            8th floor, 379 Hudson St, New York, NY 10018
+                        </li>
+
+                        <li class="txt14 m-b-14">
+                            <i class="fa fa-phone fs-16 dis-inline-block size19 me-2" aria-hidden="true"></i>
+                            (+1) 96 716 6879
+                        </li>
+
+                        <li class="txt14 m-b-14">
+                            <i class="fa fa-envelope fs-13 dis-inline-block size19 me-2" aria-hidden="true"></i>
+                            contact@site.com
+                        </li>
+                    </ul>
+
+                    <!-- - -->
+                    <h4 class="txt13 m-b-32 ms-4">
+                        Opening Times
+                    </h4>
+
+                    <ul>
+                        <li class="txt14">
+                            09:30 AM – 11:00 PM
+                        </li>
+
+                        <li class="txt14">
+                            Every Day
+                        </li>
+                    </ul>
+                </div>
+
+                <div class="col-sm-6 col-md-4 p-t-50">
+
+                    <h4 class="txt13 m-b-33">
+                        Latest twitte
+                    </h4>
+
+                    <div class="m-b-25">
+                        <span class="fs-13 color2 m-r-5">
+                            <i class="fa fa-twitter" aria-hidden="true"></i>
+                        </span>
+                        <a href="#" class="txt15">
+                            @colorlib
+                        </a>
+
+                        <p class="txt14 m-b-18">
+                            Activello is a good option. It has a slider built into that displays the featured image in
+                            the
+                            slider.
+                            <a href="#" class="txt15">
+                                https://buff.ly/2zaSfAQ
+                            </a>
+                        </p>
+
+                        <span class="txt16">
+                            21 Dec 2017
+                        </span>
+                    </div>
+
+                    <div class="">
+                        <span class="fs-13 color2 m-r-5">
+                            <i class="fa fa-twitter" aria-hidden="true"></i>
+                        </span>
+                        <a href="#" class="txt15">
+                            @colorlib
+                        </a>
+
+                        <p class="txt14 m-b-18">
+                            Activello is a good option. It has a slider built into that displays
+                            <a href="#" class="txt15">
+                                https://buff.ly/2zaSfAQ
+                            </a>
+                        </p>
+
+                        <span class="txt16">
+                            21 Dec 2017
+                        </span>
+                    </div>
+                </div>
+
+                <div class="col-sm-6 col-md-4 p-t-50">
+                    <!-- - -->
+                    <h4 class="txt13 m-b-38 mb-4">
+                        Gallery
+                    </h4>
+
+                    <!-- Gallery footer -->
+                    <div class="wrap-gallery-footer flex-w">
+                        <a class="item-gallery-footer wrap-pic-w" href="images/photo-gallery-01.jpg"
+                            data-lightbox="gallery-footer">
+                            <img src="./images/photo-gallery-02 (1).jpg" width="45px" alt="GALLERY">
+                        </a>
+
+                        <a class="item-gallery-footer wrap-pic-w" href="images/photo-gallery-02.jpg"
+                            data-lightbox="gallery-footer">
+                            <img src="./images/photo-gallery-03 (1).jpg" width="45px" alt="GALLERY">
+                        </a>
+
+                        <a class="item-gallery-footer wrap-pic-w" href="images/photo-gallery-03.jpg"
+                            data-lightbox="gallery-footer">
+                            <img src="./images/photo-gallery-05 (1).jpg" width="45px" alt="GALLERY">
+                        </a>
+
+                        <a class="item-gallery-footer wrap-pic-w" href="images/photo-gallery-04.jpg"
+                            data-lightbox="gallery-footer">
+                            <img src="./images/photo-gallery-02 (1).jpg " width="45px" alt="GALLERY">
+                        </a>
+
+                        <a class="item-gallery-footer wrap-pic-w" href="images/photo-gallery-05.jpg"
+                            data-lightbox="gallery-footer">
+                            <img src="./images/photo-gallery-thumb-01 (1).jpg" width="45px" alt="GALLERY">
+                        </a>
+
+                        <a class="item-gallery-footer wrap-pic-w" href="images/photo-gallery-06.jpg"
+                            data-lightbox="gallery-footer">
+                            <img src="./images/photo-gallery-thumb-02 (1).jpg" width="45px" alt="GALLERY">
+                        </a>
+
+                        <a class="item-gallery-footer wrap-pic-w" href="images/photo-gallery-07.jpg"
+                            data-lightbox="gallery-footer">
+                            <img src="./images/photo-gallery-thumb-03 (1).jpg" width="45px" alt="GALLERY">
+                        </a>
+
+                        <a class="item-gallery-footer wrap-pic-w" href="images/photo-gallery-08.jpg"
+                            data-lightbox="gallery-footer">
+                            <img src="./images/photo-gallery-03 (1).jpg" width="45px" alt="GALLERY">
+                        </a>
+
+                        <a class="item-gallery-footer wrap-pic-w" href="images/photo-gallery-09.jpg"
+                            data-lightbox="gallery-footer">
+                            <img src="./images/photo-gallery-02 (1).jpg" width="45px" alt="GALLERY">
+                        </a>
+
+                        <a class="item-gallery-footer wrap-pic-w" href="images/photo-gallery-10.jpg"
+                            data-lightbox="gallery-footer">
+                            <img src="./images/photo-gallery-03 (1).jpg" width="45px" alt="GALLERY">
+                        </a>
+
+                        <a class="item-gallery-footer wrap-pic-w" href="images/photo-gallery-11.jpg"
+                            data-lightbox="gallery-footer">
+                            <img src="./images/photo-gallery-05 (1).jpg" width="45px" alt="GALLERY">
+                        </a>
+
+                        <a class="item-gallery-footer wrap-pic-w" href="images/photo-gallery-12.jpg"
+                            data-lightbox="gallery-footer">
+                            <img src="./images/photo-gallery-thumb-03 (1).jpg" width="45px" alt="GALLERY">
+                        </a>
+                    </div>
+
+                </div>
+            </div>
+        </div>
+
+        <div class="end-footer bg2">
+            <div class="container">
+                <div class="flex-sb-m flex-w p-t-22 p-b-22">
+                    <div class="p-t-5 p-b-5">
+                        <a href="#" class="fs-15 c-white"><i class="fa fa-facebook m-l-18" aria-hidden="true"></i></a>
+                        <a href="#" class="fs-15 c-white"><i class="fa fa-twitter m-l-18 ms-2"
+                                aria-hidden="true"></i></a>
+                    </div>
+
+                    <div class="txt17 p-r-20 p-t-5 p-b-5">
+                        @ Afzal.
+                        <a href="#" class="txt18">
+                            Get The Theme
+                        </a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+
+    <!-- Bootstrap JS -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"
+        integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz"
+        crossorigin="anonymous"></script>
+</body>
+
+</html>
