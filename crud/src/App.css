@@ -8,3 +8,14 @@
 .lab{
     margin-left: 200px;
 }
+body {
+  background: #f8f9fa;
+}
+
+.card {
+  border-radius: 12px;
+}
+
+button {
+  min-width: 100px;
+}

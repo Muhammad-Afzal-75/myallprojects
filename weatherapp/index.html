@@ -2,45 +2,116 @@
 <html lang="en">
 
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>weather app</title>
-    <script src="https://unpkg.com/axios/dist/axios.min.js"></script>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Weather App</title>
+  <!-- Bootstrap CSS -->
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet">
+  <!-- Axios -->
+  <script src="https://unpkg.com/axios/dist/axios.min.js"></script>
 
+  <style>
+    body {
+      min-height: 100vh;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      background: linear-gradient(135deg, #74ebd5, #ACB6E5);
+      font-family: 'Poppins', sans-serif;
+    }
+
+    .card {
+      backdrop-filter: blur(15px);
+      background: rgba(255, 255, 255, 0.15);
+      border-radius: 20px;
+      border: 1px solid rgba(255, 255, 255, 0.2);
+      box-shadow: 0 8px 32px rgba(0, 0, 0, 0.2);
+      color: #fff;
+    }
+
+    .weather-icon {
+      width: 100px;
+    }
+
+    .city-input {
+      border-radius: 30px;
+      padding: 10px 20px;
+      border: none;
+    }
+
+    .btn-custom {
+      border-radius: 30px;
+      padding: 10px 25px;
+    }
+
+    h1,
+    h5 {
+      font-weight: 600;
+    }
+  </style>
 </head>
 
 <body>
-    <h1 id="change">Weather App</h1>
-    <h id="change1"></h>
-    <form onsubmit="weatherapp(); return false;">
-        <label for="cityName">cityName</label>
-        <input id="cityname" type="text" placeholder="Enter your cityName">
-        <button type="submit">Get Weather</button>
-    </form>
+  <div class="container">
+    <div class="row justify-content-center">
+      <div class="col-md-6">
+        <div class="card text-center p-4">
+          <h1 class="mb-3">🌦 Weather App</h1>
 
+          <!-- Search Form -->
+          <form onsubmit="weatherapp(); return false;" class="d-flex mb-4">
+            <input id="cityname" type="text" class="form-control city-input me-2"
+              placeholder="Enter city name e.g. London" required>
+            <button class="btn btn-primary btn-custom">Get Weather</button>
+          </form>
 
+          <!-- Weather Result -->
+          <div id="weatherResult" style="display: none;">
+            <img id="weatherIcon" class="weather-icon mb-3" alt="Weather Icon">
+            <h3 id="cityTitle"></h3>
+            <h5 id="temperature"></h5>
+            <p id="condition"></p>
+            <p id="details"></p>
+          </div>
 
-    
-    <script>
-        function weatherapp() {
-            let cityName = document.getElementById("cityname").value;
-            axios.get(`https://api.weatherapi.com/v1/current.json?key=60bedfcfe9aa4d5297430152240408&q=${cityName}&aqi=yes`)
-                .then(function (response) {
-                    // handle success
-                    console.log(response);
-                    let weather = response.data
-                    console.log(weather);
-                    document.getElementById("change").innerHTML = (`Today ${cityName} temp in celsius ${weather.current.temp_c}`)
-                    document.getElementById("change1").innerHTML = (`Today ${cityName} temp in celsius ${weather.current.temp_f}`)
+          <!-- Error -->
+          <p id="errorMsg" class="text-danger fw-bold mt-3"></p>
+        </div>
+      </div>
+    </div>
+  </div>
 
-                })
-                .catch(function (error) {
-                       // handle error
-                    console.log(error);
-                })
-        }
-    </script>
+  <script>
+    function weatherapp() {
+      let cityName = document.getElementById("cityname").value;
+      let resultBox = document.getElementById("weatherResult");
+      let errorMsg = document.getElementById("errorMsg");
 
+      axios.get(`https://api.weatherapi.com/v1/current.json?key=60bedfcfe9aa4d5297430152240408&q=${cityName}&aqi=no`)
+        .then(function (response) {
+          let weather = response.data;
+          console.log(weather);
+
+          document.getElementById("cityTitle").innerHTML = `${weather.location.name}, ${weather.location.country}`;
+          document.getElementById("temperature").innerHTML =
+            `🌡 ${weather.current.temp_c}°C / ${weather.current.temp_f}°F`;
+          document.getElementById("condition").innerHTML =
+            `Condition: ${weather.current.condition.text}`;
+          document.getElementById("details").innerHTML =
+            `💧 Humidity: ${weather.current.humidity}% | 🌬 Wind: ${weather.current.wind_kph} kph`;
+
+          document.getElementById("weatherIcon").src = weather.current.condition.icon;
+
+          resultBox.style.display = "block";
+          errorMsg.innerHTML = "";
+        })
+        .catch(function (error) {
+          console.log(error);
+          resultBox.style.display = "none";
+          errorMsg.innerHTML = "❌ City not found! Please try again.";
+        });
+    }
+  </script>
 </body>
 
 </html>

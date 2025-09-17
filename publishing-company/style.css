@@ -219,7 +219,7 @@
     position: absolute;
     width: 90%;
     display: flex;
-    gap: 30px;
+    justify-content: space-around;
     margin-top: 120vh;
     margin-left: 10px;
 
@@ -926,7 +926,6 @@ h2 {
         width: 100%;
         height: auto;
         align-items: center;
-
     }
 
     #counter .counterdiv {
@@ -962,7 +961,6 @@ h2 {
     #cardfour {
         width: 150px;
         height: 150px;
-
     }
 
     .cardflex p {
@@ -976,45 +974,39 @@ h2 {
         gap: 50px;
         height: auto;
         padding: 20px 0px;
-
-
     }
 
     #books,
     #clients,
     #blog,
     #blog .carddiv {
-
         flex-direction: column;
         align-items: center;
         padding: 0px;
-
     }
 
-    .bookscard,.secondrowcard {
+    .bookscard,
+    .secondrowcard {
         flex-direction: column;
-        padding:0px 20px;
+        padding: 0px 20px;
         gap: 40px;
         align-items: center;
-        
     }
- .subbookcard2 h4{
-    font-size: large;
-   
- }
-  .icon-card i,.icon-card1 i{
-    display: show;
-    margin-left: 300px;
-   
- }
-  
 
-    .bookcards,.sbookcards {
+    .subbookcard2 h4 {
+        font-size: large;
+    }
+
+    .icon-card i,
+    .icon-card1 i {
+        display: show;
+        margin-left: 300px;
+    }
+
+    .bookcards,
+    .sbookcards {
         flex-direction: column;
         align-items: center;
-        
-
-
     }
 
     .bookscard .bookcards .subbookcard,
@@ -1022,12 +1014,13 @@ h2 {
     .bookscard .bookcards .subbookcard3,
     .ssubbookcard4,
     .ssubbookcard3,
-    .ssubbookcard2{
+    .ssubbookcard2 {
         width: 500px;
         height: 300px;
     }
 
-    .bookscard .bookcards .subbookcard2,.sbookcard1 {
+    .bookscard .bookcards .subbookcard2,
+    .sbookcard1 {
         width: 500px;
         height: 180px;
         padding-left: 50px;
@@ -1037,10 +1030,8 @@ h2 {
     #publishing .publishingone {
         align-items: center;
         flex-direction: column;
-     padding-left: 30px;
+        padding-left: 30px;
     }
-  
-
 
     #headerone {
         flex-direction: column;
@@ -1073,17 +1064,23 @@ h2 {
         font-size: 50px;
     }
 
+    /* ✅ Footer Responsive Fix */
     #footer .footerdiv {
         display: flex;
         flex-direction: column;
-        margin-top: 300px;
+        margin-top: 50px;   /* pehle 300px tha */
         justify-content: flex-start;
+        align-items: center;
         gap: 30px;
-
+        text-align: center;
+        padding: 20px;
     }
 
     #footer {
-        height: 300vh;
+        height: auto;       /* pehle 300vh tha */
+        padding: 20px 0;
+        background: #222;   /* optional styling */
+        color: #fff;        /* optional text color */
     }
 
     .dis {
@@ -1091,5 +1088,4 @@ h2 {
         height: auto;
         align-items: center;
     }
-
 }

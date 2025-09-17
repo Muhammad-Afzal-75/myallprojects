@@ -2,33 +2,75 @@
 <html lang="en">
 
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>table</title>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Multiplication Table</title>
+  <script src="https://cdn.tailwindcss.com"></script>
+  <!-- Heroicons (for icons) -->
+  <script src="https://unpkg.com/feather-icons"></script>
 </head>
 
-<body>
-    <input id="numberInput" type="number" placeholder="Enter a 
-    number">
-    <button onclick="printTable()">Print table</button>
+<body class="flex items-center justify-center min-h-screen bg-gradient-to-r from-blue-400 via-purple-400 to-pink-400">
 
-    <script>
-        function printTable() {
-            const number = document.getElementById("numberInput").value;
-            const table = document.createElement("table");
-            table.style.border = "1px solid black";
-            const headerRow = document.createElement("tr");
-            headerRow.innerHTML = "<th>Number</th><th>Table</th>";
-            table.appendChild(headerRow);
-            for (let i = 1; i <= 10; i++) {
-                const row = document.createElement("tr");
-                row.innerHTML = `<td>${number}</td>x<td>${i}</td>=<td>${i * number}</td>`;
-                table.appendChild(row);
+  <div class="bg-white/20 backdrop-blur-lg rounded-2xl shadow-2xl p-8 w-full max-w-lg border border-white/30">
+    <h1 class="text-3xl font-extrabold text-white text-center mb-6 drop-shadow">📊 Multiplication Table</h1>
 
-            }
-            document.body.appendChild(table);
-        }
-    </script>
+    <!-- Input Form -->
+    <div class="flex gap-3 mb-6">
+      <input id="numberInput" type="number" placeholder="Enter a number"
+        class="flex-grow px-4 py-2 rounded-xl focus:outline-none focus:ring-2 focus:ring-pink-400 placeholder-gray-700">
+      <button onclick="printTable()"
+        class="flex items-center gap-2 bg-pink-500 text-white px-4 py-2 rounded-xl hover:bg-pink-600 transition transform hover:scale-105 shadow-lg">
+        <i data-feather="grid"></i> Print
+      </button>
+    </div>
+
+    <!-- Table Output -->
+    <div id="tableContainer" class="overflow-x-auto"></div>
+  </div>
+
+  <script>
+    function printTable() {
+      const container = document.getElementById("tableContainer");
+      container.innerHTML = ""; // clear old table
+
+      const number = document.getElementById("numberInput").value;
+      if (!number) {
+        container.innerHTML = `<p class="text-red-600 font-semibold">⚠ Please enter a number first!</p>`;
+        return;
+      }
+
+      const table = document.createElement("table");
+      table.className =
+        "w-full border border-gray-300 rounded-lg overflow-hidden shadow-lg text-center";
+
+      // Header
+      const headerRow = document.createElement("tr");
+      headerRow.className = "bg-pink-500 text-white";
+      headerRow.innerHTML = "<th class='p-2'>Number</th><th class='p-2'>×</th><th class='p-2'>Multiplier</th><th class='p-2'>=</th><th class='p-2'>Result</th>";
+      table.appendChild(headerRow);
+
+      // Rows
+      for (let i = 1; i <= 10; i++) {
+        const row = document.createElement("tr");
+        row.className = "hover:bg-pink-100 transition";
+        row.innerHTML = `
+          <td class="p-2 font-semibold text-gray-700">${number}</td>
+          <td class="p-2">×</td>
+          <td class="p-2 font-semibold text-gray-700">${i}</td>
+          <td class="p-2">=</td>
+          <td class="p-2 font-bold text-pink-600">${i * number}</td>
+        `;
+        table.appendChild(row);
+      }
+
+      container.appendChild(table);
+    }
+
+    // Initialize feather icons
+    feather.replace();
+  </script>
+
 </body>
 
 </html>
